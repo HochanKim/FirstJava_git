@@ -26,13 +26,20 @@ public class Practice06 {
 					// 증감식 : 덧셈 연산 (1씩 증가)
 					int x = ran.nextInt(8) + 2; // 2~7
 					int y = ran.nextInt(9) + 1; // 1~9
-					System.out.print(x+" * "+y+" = ");
-					int answer = s.nextInt();
-					if (answer == x*y) {
-						System.out.println("정답!");
-						cnt++;
-					} else {
-						System.out.println("오답!");
+					
+					int qa = 1;
+					while (qa == 1) {
+						System.out.print(x+" * "+y+" = ");
+						int answer01 = s.nextInt();
+						if (answer01 == x*y) {
+							System.out.println("정답!");
+							qa = 0;
+							cnt++;
+						} else {
+							System.out.println("오답!");
+							System.out.print("다시 풀어보시겠습니까? (예 : 1, 아니오 : 2) : ");
+							qa = s.nextInt();	
+						}
 					}
 				}
 			} else if (choiceNum == 2) {	// 채점
@@ -41,8 +48,9 @@ public class Practice06 {
 				System.out.println("프로그램 종료");
 				break;
 			} else {
-				System.out.println("다시 입력해주세요");
+				System.out.println("잘못된 입력입니다. 다시 입력해주세요");
 			}
 		}
+		s.close();
 	}
 }
