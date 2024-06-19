@@ -37,6 +37,33 @@ public class SelfCheck05_02 {
 			}
 		}
 		s.close();
+		System.out.println();
+		
+		// 1부터 30까지 10~19의 숫자를 제외하고 화면에 출력하시오.
+		// (ex. 1 2 3 4 5 6 7 8 9 20 21 22 ... 30)
+		
+		for (int i=1; i<=30; i++) {
+			if(i >= 10 && i < 20) {
+				continue;
+			}
+			System.out.print(i+" ");
+		}
+		System.out.println();
+		
+		// while 문을 이용하여 2단부터 9단까지 구구단을 출력하시오.
+		// 단, 4단과 8단은 출력하지 말 것.
+		int i = 1;	// 구구단의 변수 i 설정 (i단)
+		int j;	// 구구단에서 i와 곱해질 변수 j 설정
+		while (i < 9) {
+			i++;	// 변수 i에 증감식 사용 => i범위 1부터 8까지에 '+1' 효과 => 2부터 9까지 범위 설정
+			if (i % 4 == 0 || i % 8 == 0) {	// 4단과 8단 제외
+				continue;	// 4단, 8단 제외하고 계속(continue) 출력
+			}
+			System.out.println("== "+i+"단== ");
+			for (j=1; j < 10; j++) {	// 변수 j는 1이상 10미만 설정 (1~9)
+				System.out.println(i+"*"+j+"="+(i*j));	// 구구단 곱셈공식 출력
+			}
+		}
 	}
 
 }
