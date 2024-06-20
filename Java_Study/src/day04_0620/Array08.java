@@ -21,5 +21,4 @@ public class Array08 {
 			System.out.println();
 		}
 	}
-
 }
