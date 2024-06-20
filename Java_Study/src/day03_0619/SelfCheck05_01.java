@@ -21,17 +21,17 @@ public class SelfCheck05_01 {
 		for (int i=10; i<=50; i++) {
 			if (i % 3 == 0 && i % 2 == 0) {
 				System.out.println("3의 배수 & 짝수 : "+i);
-				System.out.println();
 			}
 		}
+		System.out.println();
 		
-		// 숫자를 두 개 입력받고, 두 수의 합이 10이 넘을 경우 '큰 수' 아닐 경우 '작은 수' 출력
-		System.out.print("첫 번째 수를 입력하세요 : ");
-		int a = s.nextInt();
-		System.out.print("두 번째 수를 입력하세요 : ");
-		int b = s.nextInt();
+		// 숫자를 두 개 입력받고, 두 수의 합이 10이 이상이면 '큰 수', 아닐 경우 '작은 수' 출력
+		System.out.print("첫 번째 수를 입력하세요 : ");	// 첫 번째 수 입력받기
+		int a = s.nextInt();						// 입력받은 첫 번재 수 저장
+		System.out.print("두 번째 수를 입력하세요 : ");	// 두 번째 수 입력받기
+		int b = s.nextInt();						// 입력받은 두 번재 수 저장
 		
-		if (a+b > 10) {
+		if (a+b >= 10) {
 			if (a>b) {
 				System.out.println(a);
 			} else {
@@ -44,6 +44,7 @@ public class SelfCheck05_01 {
 				System.out.println(a);
 			}
 		}
+		System.out.println();
 		
 		// 숫자를 하나 입력받고, 해당 숫자의 구구단 출력
 		System.out.print("임의의 숫자를 입력하세요 : ");
