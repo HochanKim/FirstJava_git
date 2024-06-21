@@ -10,7 +10,7 @@ public class Array_review {
 		// 그 중 가장 큰 숫자와 작은 숫자의 위치 바꾸기
 		// 중복된 숫자는 입력하지 않는다고 가정
 		Scanner scan = new Scanner(System.in);	// 객체 스캐너 선언
-		int arr[] = new int[3];		// 객체 배열 선언 및 크기가 3인 배열 생성
+		int arr[] = new int[5];		// 객체 배열 선언 및 크기가 5인 배열 생성
 		int minIndex = 0;			// 배열에서 가장 작은 수를 저장한 인덱스
 		int maxIndex = 0;			// 배열에서 가장 큰 수를 저장한 인덱스
 		
@@ -19,6 +19,7 @@ public class Array_review {
 			int number = scan.nextInt();
 			arr[i] = number;
 			
+			// 배열에 입력한 숫자 중복일 경우, 실행되는 반복문
 			for (int j=0; j<arr.length; j++) {
 				if (i != j && arr[i] == arr[j]) {
 					System.out.print("중복 숫자를 입력했습니다. 새로운 숫자를 입력하세요 : ");
@@ -28,6 +29,7 @@ public class Array_review {
 				}
 			}
 			
+			// 가장 큰 수와 작은 수의 인덱스 번호를 구분하는 조건문
 			if (arr[i] > arr[maxIndex]) {	// 배열 인덱스 숫자 조건 (가장 큰 수가 속한 배열 인덱스 번호)
 				maxIndex = i;	
 			}
@@ -47,5 +49,6 @@ public class Array_review {
 		arr[minIndex] = arr[maxIndex];
 		arr[maxIndex] = out;
 		System.out.println(Arrays.toString(arr));
+		scan.close();
 	}
 }

@@ -7,4 +7,12 @@ public class Calculator {
 		System.out.println(x+" + "+y+" = (입력한 두 수의 합은) "+(x+y));
 		return x+y;		// 값을 반환하기 위해서는 데이터 타입(문자, 정수 등)을 'void' 자리에 넣는다
 	}
+	
+	int sum(int x, int y, int z){
+		return x+y+z;		
+	}
+	
+	double sum(double i, double j){
+		return i+j;		
+	}
 }
