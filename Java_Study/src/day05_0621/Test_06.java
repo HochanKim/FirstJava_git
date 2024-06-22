@@ -17,10 +17,10 @@ public class Test_06 {
 		
 		for (int i=0; i<arr.length; i++) {
 			if (arr[i] >= 3) {	// 배열에서 3이상의 숫자를 분류하기 위한 조건문
-				sum = sum + arr[i];		/// 3이상의 숫자들 합계
+				sum = sum + arr[i];		// 3이상의 숫자들 합계
 			}
 		}
-		System.out.println(sum);
+		System.out.println(sum);	// 3 + 5 + 8 = 16
 	}
 
 }
