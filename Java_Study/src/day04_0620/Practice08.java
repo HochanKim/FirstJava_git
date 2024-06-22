@@ -21,7 +21,7 @@ public class Practice08 {
 		System.out.println(minIndex);	// 4
 		
 		// 배열 숫자 바꾸기
-		int temp = arr[minIndex];	// 변수 temp에 1을 대입 (가장 작은 값 저장)
+		int temp = arr[minIndex];	// 변수 'temp'에 1을 대입 (가장 작은 값 저장)
 		arr[minIndex] = arr[maxIndex];	// {3, 4, 5, 2, 5}
 		arr[maxIndex] = temp;		// {3, 4, 1, 2, 5}
 		System.out.println(Arrays.toString(arr));
