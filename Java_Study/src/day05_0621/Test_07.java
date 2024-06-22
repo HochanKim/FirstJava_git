@@ -27,6 +27,7 @@ public class Test_07 {
 			
 			// 가위, 바위, 보 (플레이어 vs 컴퓨터의 승부를 구현하는 조건문)
 			if (user == 0 && com == 1) {	// 플레이어 : 가위 <-> 컴퓨터 : 바위
+				// 플레이어 패배 (1)
 				userInput = "가위";
 				comInput = "바위";
 				System.out.println("Player : "+userInput);
@@ -35,6 +36,7 @@ public class Test_07 {
 				comWin++;	// 플레이어의 패수
 				System.out.println("Player ==> "+playerWin+"승 "+comWin+"패");	// 플레이어의 승패 현황을 출력
 			} else if (user == 1 && com == 0) {		// 플레이어 : 바위 <-> 컴퓨터 : 가위
+				// 플레이어 승리 (1)
 				userInput = "바위";
 				comInput = "가위";
 				System.out.println("Player : "+userInput);
@@ -43,6 +45,7 @@ public class Test_07 {
 				playerWin++;	// 플레이어의 승수
 				System.out.println("Player ==> "+playerWin+"승 "+comWin+"패");
 			} else if (user == 1 && com == 2) {		// 플레이어 : 바위 <-> 컴퓨터 : 보
+				// 플레이어 패배 (2)
 				userInput = "바위";
 				comInput = "보";
 				System.out.println("Player : "+userInput);
@@ -51,6 +54,7 @@ public class Test_07 {
 				comWin++;
 				System.out.println("Player ==> "+playerWin+"승 "+comWin+"패");
 			} else if (user == 2 && com == 1) {		// 플레이어 : 보 <-> 컴퓨터 : 바위
+				// 플레이어 승리 (2)
 				userInput = "보";
 				comInput = "바위";
 				System.out.println("Player : "+userInput);
@@ -59,6 +63,7 @@ public class Test_07 {
 				playerWin++;
 				System.out.println("Player ==> "+playerWin+"승 "+comWin+"패");
 			} else if (user == 2 && com == 0) {		// 플레이어 : 보 <-> 컴퓨터 : 가위
+				// 플레이어 패배 (3)
 				userInput = "보";
 				comInput = "가위";
 				System.out.println("Player : "+userInput);
@@ -67,6 +72,7 @@ public class Test_07 {
 				comWin++;
 				System.out.println("Player ==> "+playerWin+"승 "+comWin+"패");
 			} else if (user == 0 && com == 2) {		// 플레이어 : 가위 <-> 컴퓨터 : 보
+				// 플레이어 승리 (3)
 				userInput = "가위";
 				comInput = "보";
 				System.out.println("Player : "+userInput);
@@ -77,7 +83,7 @@ public class Test_07 {
 			}
 			
 			// 가위, 바위, 보 (무승부 조건문)
-			if (user == 0 && com == 0) {
+			if (user == 0 && com == 0) {	// // 플레이어 vs 컴퓨터 (Draw)
 				userInput = "가위";
 				comInput = "가위";
 				System.out.println("Player : "+userInput);
@@ -100,12 +106,12 @@ public class Test_07 {
 			// 재대결 여부 입력
 			if (user == com || user > com || user < com) {
 				System.out.println("재대결(1), 종료(2) : ");
-				int reGame = scan.nextInt();
+				int reGame = scan.nextInt();	// 입력받은 재대결 여부를 묻는 숫자를 저장하는 변수 'reGame'
 				if (reGame == 1) {
-					continue;
+					continue;	// 재시작
 				} else if (reGame == 2) {
 					System.out.println("종료되었습니다.");
-					break;
+					break;	// 종료
 				}
 			}
 		}
