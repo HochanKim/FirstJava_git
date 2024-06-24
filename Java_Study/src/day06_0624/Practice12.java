@@ -1,5 +1,7 @@
 package day06_0624;
 
+import java.util.Arrays;
+
 // 1. 클래스와 객체의 관계에 대해 주석으로 작성해시오.
 // => '클래스'는 객체를 만드는데 사용되는 것이고 '객체'는 클래스를 기반으로 생성된 물체와 같다.
 
@@ -20,6 +22,17 @@ public class Practice12 {
 		int age = hong.getAge();
 		System.out.println(age);
 		
+		// 객체의 레퍼런스만 전달
+		int arr1[] = {1, 2, 3, 4, 5};
+		int arr2[] = arr1;	// 배열 객체 'arr1'의 주소를 'arr2'에게 공유 (주소값 : 77556fd)
+		arr2[0] = 10000;
+		// 주소값 출력 => 둘 다 77556fd
+		System.out.println(arr1);
+		System.out.println(arr2);
+		
+		// 같은 배열 값 출력 => 주소를 공유하기 때문에 같은 배열 값이 나옴 => 둘 다 [10000, 2, 3, 4, 5]
+		System.out.println(Arrays.toString(arr1));
+		System.out.println(Arrays.toString(arr2));
 	}
 
 }
