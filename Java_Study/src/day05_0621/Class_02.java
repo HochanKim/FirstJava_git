@@ -12,7 +12,8 @@ public class Class_02 {
 		int n = calc.sum(3, 6, 9);
 		System.out.println(n);
 		
-		double k = calc.sum(6.21, 11.30);
+		double k = calc.sum(6.21, 11.30);	
+		// ※ 클래스에서 설정한 형과 맞지 않으면 반환을 받을수 없다.
 		System.out.println(k);
 	}
 

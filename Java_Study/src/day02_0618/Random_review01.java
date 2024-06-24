@@ -27,6 +27,7 @@ public class Random_review01 {
 				System.out.println(cnt + "번 만에 맞추셨습니다.");
 				break;
 			}
+			s.close();
 		}
 	}
 

@@ -1,7 +1,5 @@
 package day05_0621;
 
-import java.util.Arrays;
-
 /*
 
 6. int arr[] = {3, 5, 1, 8, 2}

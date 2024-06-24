@@ -114,7 +114,7 @@ public class Test_07 {
 					break;	// 종료
 				}
 			}
+			scan.close();
 		}
-		scan.close();
 	}
 }
