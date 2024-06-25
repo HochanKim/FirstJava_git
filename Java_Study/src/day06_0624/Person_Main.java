@@ -7,11 +7,12 @@ public class Person_Main {
 		Person hong = new Person("홍길동", 20);
 		
 		// 객체 생성 2
-		hong.getPhone();
-		hong.setName("홍길동");
-		hong.setAge(20);
+//		hong.setName("고길동");	// 이름이 변경됨
+//		hong.setAge(30);		// 나이가 변경됨
 		hong.setPhone("123-123");
 		
+		System.out.println(hong.getName());
+		System.out.println(hong.getAge());
 		System.out.println(hong.getPhone());
 	}
 
