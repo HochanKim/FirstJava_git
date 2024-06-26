@@ -12,7 +12,7 @@ public class PointMain_03 {
 		// 생성자 매개변수 : (int, int), 객체명(레퍼런스 변수명) 'p2'
 		PositivePoint p2 = new PositivePoint(-10, -10);
 		System.out.println(p2.toString()+"입니다.");
-		
+
 		// 결과값
 		// (10,10)의 점입니다.
 		// (10,10)의 점입니다.

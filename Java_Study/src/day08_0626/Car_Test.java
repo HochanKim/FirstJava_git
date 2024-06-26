@@ -42,15 +42,26 @@ public class Car_Test {
 	}
 	
 	// 메소드 지정 3
-	void speedUp(int speed) {
-		this.speed = speed;
+	void speedUp(int s) {
+		this.speed = s;
 	}
 	
 	// 메소드 지정 4
-//	void getSpeed() {
-//		this.speed = speed;
-//		if (speed > 200) {
-//			speed = 200;
-//		}
-//	}
+	void speedDown(int s) {
+		speed -= s;
+		if (speed < 0) {
+			speed = 0;
+			System.out.println("0 미만의 속도는 불가합니다.");
+		}
+	}
+	
+	// 메소드 지정 5
+	int getSpeed() {
+		if (speed > 200) {
+			speed = 200;
+			System.out.println("200 이상의 속도는 불가합니다.");
+		} 
+		return speed;
+	}
 }
+

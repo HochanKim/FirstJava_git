@@ -12,23 +12,23 @@ public class PositivePoint extends Point {
 		super(x, y);
 	}
 	
-	int move() {
-		if (getX() < 0 || getY() < 0) {
-			Math.abs(getX() * 2);
-			Math.abs(getY() * 2);
+	void move() {
+		this.getX();
+		this.getY();
+		if (getX() <= 0) {
+			Math.abs(getX());
 		}
-		if (getX() < 0 && getY() < 0) {
-			Math.abs(getX() * 0);
-			Math.abs(getY() * 0);
-		}
-		return getX();
 	}
+	
+
 	
 	@Override
 	public String toString() {
 		// (10,10)의 점입니다.
 		// (10,10)의 점입니다.
 		// (0,0)의 점입니다. 
-		return "("+ Math.abs(getX()) +","+ Math.abs(getY())+") 의 점";
+//		return "("+ Math.abs(getX()) +","+ Math.abs(getY())+") 의 점";
+//		return "("+ getX() +","+ getY()+") 의 점";
+		return "("+ getX() +","+ getY() +") 의 점";
 	}
 }
