@@ -47,8 +47,10 @@ public class Car_Test {
 	}
 	
 	// 메소드 지정 4
-	int getSpeed() {
-		return speed;
-//		if (speed )
-	}
+//	void getSpeed() {
+//		this.speed = speed;
+//		if (speed > 200) {
+//			speed = 200;
+//		}
+//	}
 }
