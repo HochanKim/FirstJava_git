@@ -21,4 +21,15 @@ public class Car {
 		speed += s;
 		System.out.println(speed);
 	}
+	
+	// speedDown() 메소드 정의
+	// speed가 음수일 경우 0으로 변경
+	void speedDown(int s) {
+		// 매개변수를 설정하면 값을 받을수 있다. (받는 값과 데이터 타입, 개수가 같아야 한다.)
+		speed -= s;
+		if (speed < 0) {
+			speed = 0;	
+		}
+		System.out.println(speed);
+	}
 }

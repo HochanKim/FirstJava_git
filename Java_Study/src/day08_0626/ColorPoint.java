@@ -4,13 +4,26 @@ public class ColorPoint extends Point {		// 상위클래스 'Point'의 상속받
 	// 문자열 변수 'color' 선언 (프라이빗 지정 => 직접 접근 불가)
 	private String color;
 	
-	// 생성자 작성
+	// 생성자 작성 (매개변수 : (int, int, String))
 	ColorPoint (int x, int y, String color) {
 		// 상위클래스의 생성자 가져오기
 		// public Point(int x, int y) {}
 		super(x, y);	
 		// 클래스 내 변수 접근
 		this.color = color;
+	}
+	
+	// 생성자 작성
+	ColorPoint () {
+		// (0,0) 위치의 BLACK 색 점
+		// 같은 매개변수의 생성자는 작성할수 없다
+		// 하지만 this(매개변수)를 이용하여 같은 생성자의 기능은 가져오기 가능
+		this(0, 0, "BLACK");	// (int, int, "String");
+	}
+	
+	// 생성자 작성 (매개변수 : (int, int))
+	ColorPoint (int x, int y) {
+		super(x, y);	// 같은 매개변수의 상위클래스 생성자 가져오기
 	}
 	
 	void setXY(int x, int y) {
