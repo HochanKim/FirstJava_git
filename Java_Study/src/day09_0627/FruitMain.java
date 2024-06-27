@@ -18,12 +18,12 @@ public class FruitMain {
 		Apple apple = new Apple("사과", "빨간색", 4500);
 		Fruit a = apple; // 업캐스팅
 		
-		// Candy candy = new Candy();
+//		Candy candy = new Candy();
 		
 		boxing(banana);
 		boxing(apple);
 		boxing(orange);
-		// boxing(candy);
+//		boxing(candy);
 	}
 
 }
