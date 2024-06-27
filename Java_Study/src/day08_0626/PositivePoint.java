@@ -1,34 +1,36 @@
 package day08_0626;
+//클래스 상속 복습 (review)
 
 public class PositivePoint extends Point {
 	
 	PositivePoint () {
-		// this()로 다른 생성자 호출
-		this(0, 0);
+		// 기본 생성자
+		super(0, 0);	// 기본 생성자를 상속
 	}
 	
 	PositivePoint (int x, int y) {
 		// 생성자 작성 (기본 생성자가 사라짐)
 		super(x, y);
-	}
-	
-	void move() {
-		this.getX();
-		this.getY();
-		if (getX() <= 0) {
-			Math.abs(getX());
+		if(x < 0 && y < 0) {	// 둘 다 음수이면
+			super.move(0, 0);	// 상위클래스 메소드 move()를 호출하여 x = 0, y = 0으로 전달
 		}
 	}
 	
-
+	@Override	// 상위클래스에 존재하는 메소드 move()를 상속받아서 오버라이드(재정의)
+	protected void move(int x, int y) {
+		if (!(x < 0 || y < 0)) {	// 둘 다 음수가 아니라면
+			super.move(x, y);		// 상위클래스 메소드 move()를 호출하여 x, y 값을 전달
+		}	// 그렇지 않으면(else), 값을 전달하지 않기
+	}
+	
+	
+		
 	
 	@Override
 	public String toString() {
 		// (10,10)의 점입니다.
 		// (10,10)의 점입니다.
 		// (0,0)의 점입니다. 
-//		return "("+ Math.abs(getX()) +","+ Math.abs(getY())+") 의 점";
-//		return "("+ getX() +","+ getY()+") 의 점";
-		return "("+ getX() +","+ getY() +") 의 점";
+		return "("+ super.getX() +","+ super.getY() +") 의 점";
 	}
 }

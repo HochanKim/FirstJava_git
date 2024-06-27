@@ -1,4 +1,5 @@
 package day08_0626;
+//클래스 상속 복습 (review)
 
 public class Point3D extends Point {
 	// 변수 선언

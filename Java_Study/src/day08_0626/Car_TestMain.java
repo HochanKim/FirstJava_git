@@ -8,7 +8,7 @@ public class Car_TestMain {
 		car1.setInfo("아반떼", "노란색", 0); // 0은 speed
 		car1.carInfo(); // 자동차의 이름은 아반떼, 색상은 노란색 입니다.
 		
-		Car_Test car2 = new Car_Test("소나타","파란색",0);
+		Car_Test car2 = new Car_Test("소나타","파란색", 0);
 		car2.carInfo(); // 자동차의 이름은 소나타, 색상은 파란색 입니다.
 		car2.speedUp(10);
 		System.out.println("현재 속도는 " + car2.getSpeed() + " 입니다.");
