@@ -1,4 +1,4 @@
-package day2_before;
+package day91_before;
 
 public class Var {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package day2_before;
+package day91_before;
 
 import java.util.Scanner;	// 스캐너 기능 가져오기
 

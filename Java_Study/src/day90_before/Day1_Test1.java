@@ -1,4 +1,4 @@
-package day1_before;
+package day90_before;
 
 public class Day1_Test1 {	// 변수 선언
 	public static void main(String[] args) {
