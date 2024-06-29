@@ -5,7 +5,6 @@ public class ParentClass {
 	// 필드 선언 (변수)
 	private String name;
 	private int x;
-	private int arr[];
 	
 	// 기본 생성자
 	ParentClass () {}
@@ -15,6 +14,16 @@ public class ParentClass {
 		// ParentClass p = new ParentClass("홍길동");
 		this.name = name;
 		System.out.println(this.name+"님 자바 클래스 테스트를 시작합니다!");
+		
+	}
+	
+	// 메소드 작성, private 지정으로 인한 set, get 작성
+	void setNum(int x) {
+		this.x = x;
+	}
+	
+	int getNum() {
+		return x;
 	}
 	
 	// 메소드 작성 'p.gugudan(3);'
@@ -39,10 +48,6 @@ public class ParentClass {
 		return max;	// 'p.arrBigNum(arr)'에 값을 반환
 	}
 	
-	@Override
-	public String toString() {
-		return null;
-	}
 
 
 }

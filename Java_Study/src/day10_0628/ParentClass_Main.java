@@ -20,9 +20,9 @@ public class ParentClass_Main {
 		ChildClass c = new ChildClass();
 		c.gugudan(6); // 안내 문구 후 6단 출력
 		
-//		c.objType("안녕"); // 문자열 입니다.
-//		c.objType(123); // 정수 입니다.
-//		c.objType(p); // 문자나 정수가 아닙니다.
+		c.objType("안녕"); // 문자열 입니다.
+		c.objType(123); // 정수 입니다.
+		c.objType(p); // 문자나 정수가 아닙니다.
 
 	}
 
