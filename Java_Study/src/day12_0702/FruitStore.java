@@ -17,20 +17,19 @@ public class FruitStore {
 			// 정보 보관
 			HashMap<String, Object> map = new HashMap<>();
 			int menu = 0;
-			System.out.println("== (1)과일 추가 (2)판매 (3)개수확인 (그외)종료 ==");
-			for (;;) {
+			
+			// 예외처리
+			for(;;) {
+				System.out.println("== (1)과일 추가 (2)판매 (3)개수확인 (그외)종료 ==");
 				System.out.print("메뉴 선택 : ");
 	            try {
-	    			menu = scan.nextInt();
+	            	menu = scan.nextInt();
 	                break;
 	            } catch (InputMismatchException e) {
 	                System.out.println("[ERROR] 숫자를 입력해주세요.");
-	                break;
+	                continue;
 	            }
-//	            continue;
-	        }
-			
-			
+			}
 			
 			
 			if(menu == 1) {	// 조건문 1
