@@ -24,19 +24,31 @@ public class FruitStore {
 				System.out.print("과일명 : ");
 				map.put("name", scan.next());
 				
-				System.out.print("가격 입력 : ");
 				for(;;) {
+					System.out.print("가격 입력 : ");
 					int price = scan.nextInt();
-					if (scan.nextInt() < 0) {
+					if(price < 0) {
 						System.out.println("잘못된 입력입니다. (최소 0까지 입력가능)");
 						continue;
+					} else {
+						map.put("price", price);
+						break;
 					}
-					map.put("price", price);
-				}	
+				}
 				
-//				System.out.print("개수 입력 : ");
-//				map.put("num", scan.nextInt());
-//				list.add(map);
+				for(;;) {
+					System.out.print("개수 입력 : ");
+					int num = scan.nextInt();
+					if(num < 0) {
+						System.out.println("잘못된 입력입니다. (최소 0까지 입력가능)");
+						continue;
+					} else {
+						map.put("num", scan.nextInt());
+						break;
+					}
+				}	
+				list.add(map);
+				continue;
 				
 			} else if(menu == 2) {
 				System.out.print("과일명 : ");
