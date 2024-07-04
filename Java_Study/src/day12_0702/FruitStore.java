@@ -94,7 +94,6 @@ public class FruitStore {
 								}
 							}
 							break;
-							
 						}
 						break;
 					}
@@ -113,9 +112,7 @@ public class FruitStore {
 						System.out.println(name +"의 현재 남은 개수는 "+ num +"개 입니다.");
 					}
 				}
-			} 
-			
-			else {	// else (1~3 이외 번호 입력시)
+			} else {	// else (1~3 이외 번호 입력시)
 				System.out.println("종료!");
 				break;
 			}

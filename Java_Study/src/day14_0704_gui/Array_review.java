@@ -1,6 +1,5 @@
-package day14_0704;
+package day14_0704_gui;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -52,5 +51,6 @@ public class Array_review {
 			}
 			System.out.println(Arrays.toString(arr));
 		}
+		scan.close();
 	}
 }
