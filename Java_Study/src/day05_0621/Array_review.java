@@ -20,12 +20,11 @@ public class Array_review {
 			arr[i] = number;
 			
 			// 배열에 입력한 숫자 중복일 경우, 실행되는 반복문
-			for (int j=0; j<arr.length; j++) {
-				if (i != j && arr[i] == arr[j]) {
-					System.out.print("중복 숫자를 입력했습니다. 새로운 숫자를 입력하세요 : ");
-					number = scan.nextInt();
-					arr[j] = number;
-					j--;
+			for (int j=0; j<i; j++) {
+				if (arr[i] == arr[j]) {
+					System.out.println("중복 숫자를 입력했습니다. 새로운 숫자를 입력하세요");
+					i--;
+					break;
 				}
 			}
 			
@@ -37,6 +36,7 @@ public class Array_review {
 				minIndex = i;	
 			}
 		}
+		
 		System.out.println();
 		System.out.println(Arrays.toString(arr));
 		System.out.println();
