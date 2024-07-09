@@ -62,37 +62,32 @@ public class FruitStore {
 			
 			if(menu == 2) { // 조건문 2
 				System.out.print("과일명 : ");
-				String fruit = scan.next();
+				String inputFruit = scan.next();
 				System.out.print("판매 개수 입력 : ");
 				int inputNum = scan.nextInt();
-				
-				// 특정 조건 반복문 실행
-				while (true) {
-					HashMap<String, Object> map = new HashMap<>();
-					for(int i=0; i<list.size(); i++) {
-						int num = (int) list.get(i).get("num");
-						
-						if(inputNum < 0) {	
-							System.out.println("잘못된 입력입니다. (최소 0까지 입력가능)");
-							continue;
-						}	
-						
-						if(fruit.equals(map.get("fruit"))) {
-							list.get(i).put("num", (num - inputNum));
-								
-							// 잘못된 개수 계산시 조건문
-							if(num-inputNum < 0) {
-								System.out.println("개수가 부족합니다.");
-								list.get(i).put("num", (num - inputNum + inputNum));
-								continue;
-							} 
-							System.out.println("판매되었습니다.");
-							System.out.println(fruit+ "의 현재 남은 개수는 "+ (num - inputNum) +"개 입니다.");
-						} 
-						break;
-					}
-					break;
+				// 음수 체크
+				if(inputNum < 0) {
+					System.out.println("잘못 입력했습니다.");
+					continue;
 				}
+				// 특정 조건 반복문 실행
+				for(int i=0; i<list.size(); i++) {
+					HashMap<String, Object> map = list.get(i);
+					String fruit = (String) map.get("fruit");
+					if(inputFruit.equals(fruit)) {
+						int num = (int) map.get("num");
+						// 음수 체크
+						if(num - inputNum < 0) {
+							System.out.println("개수가 부족합니다.");
+							continue;
+						} else {
+							map.put("num", num - inputNum);
+							System.out.println("판매되었습니다.");
+							System.out.println(fruit+"의 남은 개수는 "+map.get("num")+"개 입니다.");
+						}
+					}
+				}
+				
 			}
 			if(menu == 3) {	// 조건문3
 				System.out.print("과일명 : ");

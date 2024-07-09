@@ -16,6 +16,7 @@ public class FruitStore {
 			System.out.println("== (1)과일 추가 (2)판매 (3)개수확인 (그외)종료 ==");
 			System.out.print("메뉴 선택 : ");
 			int menu = s.nextInt();
+			
 			if (menu == 1) {
 				// 과일추가
 				HashMap<String, Object> map = new HashMap<>();
@@ -51,15 +52,24 @@ public class FruitStore {
 				String inputName = s.next();
 				System.out.print("개수 : ");
 				int inputNum = s.nextInt();
+				if (inputNum < 0) {
+					System.out.println("음수 입력은 안됨");
+					continue;
+				}
+				
 				for(int i=0; i<list.size(); i++) {
 					HashMap<String, Object> map = list.get(i);
 					String name = (String) map.get("name");
 					// 과일명 중복체크 조건
 					if(inputName.equals(name)) {
 						int num = (int) map.get("num");
-						map.put("num", num - inputNum);
-						System.out.println("판매되었습니다.");
-						System.out.println(name+ "의 현재 남은 개수는 "+ map.put("num", num - inputNum) +"개 입니다.");
+						if (num < inputNum) {
+							System.out.println("개수 부족!");
+						} else {
+							map.put("num", num - inputNum);
+							System.out.println("판매되었습니다.");
+							System.out.println(name+ "의 현재 남은 개수는 "+ map.get("num") +"개 입니다.");
+						}
 					}
 				}
 				
