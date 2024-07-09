@@ -17,7 +17,5 @@ public class For_review05 {
 				System.out.println(i + " X " + j + " = " + (i*j));
 			}
 		}
-
 	}
-
 }

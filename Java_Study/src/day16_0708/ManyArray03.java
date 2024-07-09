@@ -7,7 +7,7 @@ package day16_0708;
 public class ManyArray03 {
 
 	public static void main(String[] args) {
-		int arr[][] = new int[4][4];
+		int arr[][] = new int[4][4];	// arr.length = 4, arr[].length = 4
 		// [0][0] ~ [2][2]은 1~9 랜덤 숫자 넣기
 		int rowLast = arr.length - 1;
 		int colLast = arr[0].length - 1;

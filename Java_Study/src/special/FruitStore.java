@@ -63,6 +63,8 @@ public class FruitStore {
 			if(menu == 2) { // 조건문 2
 				System.out.print("과일명 : ");
 				String fruit = scan.next();
+				System.out.print("판매 개수 입력 : ");
+				int inputNum = scan.nextInt();
 				
 				// 특정 조건 반복문 실행
 				while (true) {
@@ -70,14 +72,12 @@ public class FruitStore {
 					for(int i=0; i<list.size(); i++) {
 						int num = (int) list.get(i).get("num");
 						
-						System.out.print("판매 개수 입력 : ");
-						int inputNum = scan.nextInt();
 						if(inputNum < 0) {	
 							System.out.println("잘못된 입력입니다. (최소 0까지 입력가능)");
 							continue;
 						}	
 						
-						if(fruit.equals((String) list.get(i).get("fruit"))) {
+						if(fruit.equals(map.get("fruit"))) {
 							list.get(i).put("num", (num - inputNum));
 								
 							// 잘못된 개수 계산시 조건문
@@ -85,17 +85,15 @@ public class FruitStore {
 								System.out.println("개수가 부족합니다.");
 								list.get(i).put("num", (num - inputNum + inputNum));
 								continue;
-							}
-						} else {
+							} 
 							System.out.println("판매되었습니다.");
 							System.out.println(fruit+ "의 현재 남은 개수는 "+ (num - inputNum) +"개 입니다.");
-						}
+						} 
 						break;
 					}
 					break;
 				}
 			}
-			
 			if(menu == 3) {	// 조건문3
 				System.out.print("과일명 : ");
 				String fruit = scan.next();
@@ -107,7 +105,6 @@ public class FruitStore {
 					}
 				}
 			}
-			
 			if(menu < 1 || menu > 3) {
 				System.out.println("종료!");
 				break;
