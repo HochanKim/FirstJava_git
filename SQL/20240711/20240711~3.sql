@@ -1,0 +1,15 @@
+-- COUNT()
+SELECT COUNT(*) AS CNT
+FROM STUDENT
+WHERE STU_DEPT = '컴퓨터정보';
+
+-- EX) 시험을 80점 이상 맞은 사람의 수 (중복 허용)
+SELECT COUNT(*)
+FROM ENROL
+WHERE ENR_GRADE >= 80;
+
+-- EX) 시험을 80점 이상 맞은 사람의 이름과 학번을 출력 (중복 허용)
+SELECT ENR_GRADE, S.STU_NO, STU_NAME
+FROM ENROL E
+INNER JOIN STUDENT S ON E.STU_NO = S.STU_NO
+WHERE ENR_GRADE >= 80;
