@@ -2,6 +2,7 @@ package collection01;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class Collection02 {
 
@@ -11,6 +12,14 @@ public class Collection02 {
 		// 박영희, 25, 제주
 		
 		Human hong = new Human("홍길동", 30, "서울");
+		
+		HashMap<String, Object> map = Test.callPerson(hong);
+		System.out.println(map.get("name"));
+		System.out.println(map.get("age"));
+		System.out.println(map.get("addr"));
+		System.out.println();
+		
+		
 		Human kim = new Human("김철수", 20, "인천");
 		Human park = new Human("박영희", 25, "제주");
 		
@@ -22,11 +31,17 @@ public class Collection02 {
 		// Test 클래스에 있는 callHuman 메소드 호출
 		// 리턴으로는 hong, kim, park 3개의 객체를 받기
 		// 그 결과를 ArrayList에 저장
-//		ArrayList<Human> list = Test.callHuman();
+		ArrayList<Human> list = Test.callHuman();
 		
 		// Test 클래스에 있는 callHuman 메소드 호출
 		// 리턴으로는 문자열 "안녕하세요"
-//		String str = Test.callHuman();
+		String str = Test.callHuman1();
+		System.out.println(str);
+		
+		int arr[] = Test.callArray();
+		// [1, 3, 5, 7, 9] 결과를 리턴 받기
+		System.out.println(Arrays.toString(arr));
+		 
 	}
 
 }
