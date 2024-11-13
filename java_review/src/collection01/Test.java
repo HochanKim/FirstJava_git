@@ -36,5 +36,19 @@ public class Test {
 		
 		return person;
 	}
-
+	
+	static Human maxAge(ArrayList<Human> list) {
+		Human oldest = list.get(0); // 리스트의 첫 번째 요소를 연장자로 초기화 (객체 'oldest' 생성)
+		
+		for(int i=1; i<list.size(); i++) {
+			Human person = list.get(i);	// 리스트의 요소들을 리스트에 담겨진 수만큼 반복 (반복하여 검색한 요소들을 담기 위한 객체 'person' 생성)
+			
+			if(person.getAge() > oldest.getAge()) {
+				// 객체 'oldest'와 객체 'person'의 요소들의 나이를 비교하기 위한 조건
+				// 가장 나이가 많은 객체는 'oldest'에 대입하여 반환
+				oldest = person;
+			 }
+		}
+		return oldest;	// 가장 나이가 많은 요소를 반환
+    }
 }
